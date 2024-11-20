@@ -72,7 +72,7 @@ CREATE TABLE IF NOT EXISTS `specialist` (
 -- Dumping data for table `specialist`
 --
 
-INSERT INTO `specialist` (`speid`, `spemail`, `spname`, `sppassword`, `sprut`, `sptel`, `specialties`) VALUES
+INSERT INTO `specialist` (`speid`, `spemail`, `spename`, `spepassword`, `sperut`, `spetel`, `specialties`) VALUES
 (1, 'especialista@OLAPoint.com', 'Especialista Prueba', '123', '000000000', '0110000000', 1);
 
 -- --------------------------------------------------------
