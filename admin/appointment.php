@@ -110,7 +110,7 @@
                         <p class="heading-sub12" style="padding: 0;margin: 0;">
                             <?php 
 
-                        date_default_timezone_set('Asia/Kolkata');
+                        date_default_timezone_set('America/Santiago');
 
                         $today = date('Y-m-d');
                         echo $today;
