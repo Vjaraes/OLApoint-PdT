@@ -22,14 +22,14 @@
     $_SESSION["user"]="";
     $_SESSION["usertype"]="";
     
-    // Set the new timezone
+   
     date_default_timezone_set('America/Santiago');
     $date = date('d-m-Y');
 
     $_SESSION["date"]=$date;
     
 
-    //import database
+    //Importar BBDD
     include("connection.php");
 
     
@@ -52,30 +52,30 @@
                 if ($checker->num_rows==1){
 
 
-                    //   Patient dashbord
+                    //   Dashboard del Paciente
                     $_SESSION['user']=$email;
                     $_SESSION['usertype']='p';
                     
                     header('location: patient/index.php');
 
                 }else{
-                    $error='<label for="promter" class="form-label" style="color:rgb(255, Credenciales invalidas: Email o password incorrecta.</label>';
+                    $error='<label for="promter" class="form-label" style="color:rgb(255, Credenciales invalidas: Email o password incorrecto.</label>' ;
                 }
 
             }elseif($utype=='a'){
-                //TODO
+                
                 $checker = $database->query("select * from admin where aemail='$email' and apassword='$password'");
                 if ($checker->num_rows==1){
 
 
-                    //   Admin dashbord
+                    //   Dashboard del Admin
                     $_SESSION['user']=$email;
                     $_SESSION['usertype']='a';
                     
                     header('location: admin/index.php');
 
                 }else{
-                    $error='<label for="promter" class="form-label" style="color:rgb(255, 62, 62);text-align:center;">Credenciales invalidas: Email o password incorrecta.</label>';
+                    $error='<label for="promter" class="form-label" style="color:rgb(255, 62, 62);text-align:center;">Credenciales invalidas: Email o password incorrecto.</label>';
                 }
 
 
@@ -85,19 +85,19 @@
                 if ($checker->num_rows==1){
 
 
-                    //   specialist dashbord
+                    //   Dashboard del Especialista
                     $_SESSION['user']=$email;
                     $_SESSION['usertype']='d';
                     header('location: specialist/index.php');
 
                 }else{
-                    $error='<label for="promter" class="form-label" style="color:rgb(255, 62, 62);text-align:center;">Credenciales invalidas: Email o password incorrecta.</label>';
+                    $error='<label for="promter" class="form-label" style="color:rgb(255, 62, 62);text-align:center;">Credenciales invalidas: Email o password incorrecto.</label>';
                 }
 
             }
             
         }else{
-            $error='<label for="promter" class="form-label" style="color:rgb(255, 62, 62);text-align:center;">No odemos encontrar ninguna cuenta asociada a este email.</label>';
+            $error='<label for="promter" class="form-label" style="color:rgb(255, 62, 62);text-align:center;">No podemos encontrar ninguna cuenta asociada a este email.</label>';
         }
 
 
@@ -170,7 +170,7 @@
                 <td>
                     <br>
                     <label for="" class="sub-text" style="font-weight: 280;">¿No tienes una cuenta?&#63; </label>
-                    <a href="signup.php" class="hover-link1 non-style-link">Registrarse</a>
+                    <a href="signup.php" class="hover-link1 non-style-link">Registrate</a>
                     <br><br><br>
                 </td>
             </tr>
