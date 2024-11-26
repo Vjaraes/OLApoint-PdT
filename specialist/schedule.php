@@ -304,7 +304,7 @@
                         <h2>¿Estas seguro?</h2>
                         <a class="close" href="schedule.php">&times;</a>
                         <div class="content">
-                            Deseas eliminar este registro<br>('.substr($nameget,0,40).').
+                            ¿Deseas eliminar este registro?<br>('.substr($nameget,0,40).').
                             
                         </div>
                         <div style="display: flex;justify-content: center;">
