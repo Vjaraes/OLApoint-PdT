@@ -12,8 +12,8 @@
         //print_r($_POST);
         $result= $database->query("select * from webuser");
         $name=$_POST['name'];
-        $oldemail=$_POST["oldemail"];
         $rut=$_POST['rut'];
+        $oldemail=$_POST["oldemail"];
         $spec=$_POST['spec'];
         $email=$_POST['email'];
         $tele=$_POST['Tele'];
@@ -43,11 +43,10 @@
                 //$sql1="insert into specialist(spemail,spename,spepassword,sperut,spetel,specialties) values('$email','$name','$password','$rut','$tele',$spec);";
                 $sql1="update specialist set spemail='$email',spename='$name',spepassword='$password',sperut='$rut',spetel='$tele',specialties=$spec where speid=$id ;";
                 $database->query($sql1);
-
+                
                 $sql1="update webuser set email='$email' where email='$oldemail' ;";
                 $database->query($sql1);
-
-                echo $sql1;
+                //echo $sql1;
                 //echo $sql2;
                 $error= '4';
                 
@@ -66,7 +65,7 @@
     }
     
 
-    header("location: settings.php?action=edit&error=".$error."&id=".$id);
+    header("location: specialists.php?action=edit&error=".$error."&id=".$id);
     ?>
     
    

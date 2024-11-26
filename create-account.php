@@ -63,7 +63,7 @@ if($_POST){
             $error='<label for="promter" class="form-label" style="color:rgb(255, 62, 62);text-align:center;">Ya existe una cuenta asociada a este correo.</label>';
         }else{
             
-            $database->query("insert into patient(pemail,pname,ppassword, paddress, pnic,pdob,ptel) values('$email','$name','$newpassword','$address','$rut','$dob','$tele');");
+            $database->query("insert into patient(pemail,pname,ppassword, paddress, prut,pdob,ptel) values('$email','$name','$newpassword','$address','$rut','$dob','$tele');");
             $database->query("insert into webuser values('$email','p')");
 
             //print_r("insert into patient values($pid,'$email','$fname','$lname','$newpassword','$address','$rut','$dob','$tele');");
