@@ -19,8 +19,8 @@ body{
 }
 
 
-/*------custom-scroll-bar - fuente w3schools.com------------------*/
-/* ancho */
+
+  /* Scrollbar */
 ::-webkit-scrollbar {
     width: 5px;
   }
