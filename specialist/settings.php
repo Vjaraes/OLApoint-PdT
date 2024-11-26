@@ -127,9 +127,9 @@
                                 </p>
                                 <p class="heading-sub12" style="padding: 0;margin: 0;">
                                     <?php 
-                                date_default_timezone_set('Asia/Kolkata');
+                                date_default_timezone_set('America/Santiago');
         
-                                $today = date('Y-m-d');
+                                $today = date('d-m-Y');
                                 echo $today;
 
 
@@ -248,7 +248,7 @@
             <div id="popup1" class="overlay">
                     <div class="popup">
                     <center>
-                        <h2>¡Estas seguro?</h2>
+                        <h2>¿Estas seguro?</h2>
                         <a class="close" href="settings.php">&times;</a>
                         <div class="content">
                             ¿Quieres borrar este registro?<br>('.substr($nameget,0,40).').
@@ -274,7 +274,7 @@
             $spcil_res= $database->query("select sname from specialties where id='$spe'");
             $spcil_array= $spcil_res->fetch_assoc();
             $spcil_name=$spcil_array["sname"];
-            $nic=$row['sperut'];
+            $rut=$row['sperut'];
             $tele=$row['spetel'];
             echo '
             <div id="popup1" class="overlay">
@@ -324,7 +324,7 @@
                             </tr>
                             <tr>
                                 <td class="label-td" colspan="2">
-                                '.$nic.'<br><br>
+                                '.$rut.'<br><br>
                                 </td>
                             </tr>
                             <tr>
@@ -376,13 +376,13 @@
             $spcil_res= $database->query("select sname from specialties where id='$spe'");
             $spcil_array= $spcil_res->fetch_assoc();
             $spcil_name=$spcil_array["sname"];
-            $nic=$row['sperut'];
+            $rut=$row['sperut'];
             $tele=$row['spetel'];
 
             $error_1=$_GET["error"];
                 $errorlist= array(
                     '1'=>'<label for="promter" class="form-label" style="color:rgb(255, 62, 62);text-align:center;">Este correo ya tiene una cuenta asociada.</label>',
-                    '2'=>'<label for="promter" class="form-label" style="color:rgb(255, 62, 62);text-align:center;">Error de contraseña. Por favor ingrese nuevamente.</label>',
+                    '2'=>'<label for="promter" class="form-label" style="color:rgb(255, 62, 62);text-align:center;">Error de password. Por favor ingrese nuevamente.</label>',
                     '3'=>'<label for="promter" class="form-label" style="color:rgb(255, 62, 62);text-align:center;"></label>',
                     '4'=>"",
                     '0'=>'',
@@ -406,7 +406,7 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            <p style="padding: 0;margin: 0;text-align: left;font-size: 25px;font-weight: 500;">Edit specialist Details.</p>
+                                            <p style="padding: 0;margin: 0;text-align: left;font-size: 25px;font-weight: 500;">Editar detalles del Especialista.</p>
                                         ID del Especialista : '.$id.' (Auto Generated)<br><br>
                                         </td>
                                     </tr>
