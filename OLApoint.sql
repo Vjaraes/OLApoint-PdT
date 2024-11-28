@@ -6,6 +6,8 @@ SET time_zone = "-04:00";
 SET date_format = "%d-%m-%Y"
 
 
+
+
 --
 -- Estructura tabla `admin`
 --
