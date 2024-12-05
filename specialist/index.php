@@ -46,10 +46,10 @@
 
     //import database
     include("../connection.php");
-    $userrow = $database->query("select * from specialist where docemail='$useremail'");
+    $userrow = $database->query("select * from specialist where speemail='$useremail'");
     $userfetch=$userrow->fetch_assoc();
     $userid= $userfetch["speid"];
-    $username=$userfetch["docname"];
+    $username=$userfetch["spename"];
 
 
     //echo $userid;
