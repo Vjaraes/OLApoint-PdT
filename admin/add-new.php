@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../css/main.css">  
     <link rel="stylesheet" href="../css/admin.css">
         
-    <title>specialist</title>
+    <title>Especialista</title>
     <style>
         .popup{
             animation: transitionIn-Y-bottom 0.5s;
@@ -45,7 +45,7 @@
         $rut=$_POST['rut'];
         $spec=$_POST['spec'];
         $email=$_POST['email'];
-        $tele=$_POST['Tele'];
+        $tele=$_POST['tele'];
         $password=$_POST['password'];
         $cpassword=$_POST['cpassword'];
         
