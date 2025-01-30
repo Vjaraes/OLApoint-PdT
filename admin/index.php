@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -135,7 +135,7 @@
                                     <?php 
                                 date_default_timezone_set('America/Santiago');
         
-                                $today = date('Y-m-d');
+                                $today = date('d-m-Y');
                                 echo $today;
 
 
@@ -289,7 +289,7 @@
                                         <tbody>
                                         
                                             <?php
-                                            $nextweek=date("Y-m-d",strtotime("+1 week"));
+                                            $nextweek=date("d-m-Y",strtotime("+1 week"));
                                             $sqlmain= "select appointment.appoid,schedule.scheduleid,schedule.title,specialist.spename,patient.pname,schedule.scheduledate,schedule.scheduletime,appointment.apponum,appointment.appodate from schedule inner join appointment on schedule.scheduleid=appointment.scheduleid inner join patient on patient.pid=appointment.pid inner join specialist on schedule.speid=specialist.speid  where schedule.scheduledate>='$today'  and schedule.scheduledate<='$nextweek' order by schedule.scheduledate desc";
 
                                                 $result= $database->query($sqlmain);
