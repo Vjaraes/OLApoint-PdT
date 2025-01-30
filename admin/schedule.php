@@ -112,7 +112,7 @@
 
                         date_default_timezone_set('America/Santiago');
 
-                        $today = date('Y-m-d');
+                        $today = date('d-m-Y');
                         echo $today;
 
                         $list110 = $database->query("select  * from  schedule;");
