@@ -172,7 +172,7 @@
                                                     <?php    echo $specialistrow->num_rows  ?>
                                                 </div><br>
                                                 <div class="h3-dashboard">
-                                                    specialists &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    Especialistas &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                 </div>
                                         </div>
                                                 <div class="btn-icon-back dashboard-icons" style="background-image: url('../img/icons/specialists-hover.svg');"></div>
@@ -185,7 +185,7 @@
                                                     <?php    echo $patientrow->num_rows  ?>
                                                 </div><br>
                                                 <div class="h3-dashboard">
-                                                    Patients &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    Pacientes &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                 </div>
                                         </div>
                                                 <div class="btn-icon-back dashboard-icons" style="background-image: url('../img/icons/patients-hover.svg');"></div>
