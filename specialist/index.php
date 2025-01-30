@@ -133,7 +133,7 @@
 
 
                                 $patientrow = $database->query("select  * from  patient;");
-                                $specialistrow = $database->query("select  * from  specialist;");
+                                $sperow = $database->query("select  * from  specialist;");
                                 $appointmentrow = $database->query("select  * from  appointment where appodate>='$today';");
                                 $schedulerow = $database->query("select  * from  schedule where scheduledate='$today';");
 
