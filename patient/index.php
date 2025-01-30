@@ -158,7 +158,7 @@
                     <table class="filter-container specialist-header patient-header" style="border: none;width:95%" border="0" >
                     <tr>
                         <td >
-                            <h3>Welcome!</h3>
+                            <h3>Bienvenido!</h3>
                             <h1><?php echo $username  ?>.</h1>
                             <p>¿No tienes idea de qué necesitas?  Vamos a la sección de 
                                 <a href="specialists.php" class="non-style-link"><b>Todos los Especialistas.</b></a> o vamos a tus citas agendadas. 
@@ -166,7 +166,7 @@
                                 Sigue tus citas actuales y futuras<br>también confirma las citas de tu especialista.<br><br>
                             </p>
                             
-                            <h3>Channel a specialist Here</h3>
+                            <h3>Elije un especialista aquí</h3>
                             <form action="schedule.php" method="post" style="display: flex">
 
                                 <input type="search" name="search" class="input-text " placeholder="Search specialist and We will Find The Session Available" list="specialists" style="width:45%;">&nbsp;&nbsp;
@@ -204,10 +204,6 @@
                         <table border="0" width="100%"">
                             <tr>
                                 <td width="50%">
-
-                                    
-
-
 
 
                                     <center>
