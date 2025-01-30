@@ -192,7 +192,7 @@
                                                     <div  class="dashboard-items"  style="padding:20px;margin:auto;width:95%;display: flex">
                                                         <div>
                                                                 <div class="h1-dashboard">
-                                                                    <?php    echo $specialistrow->num_rows  ?>
+                                                                    <?php    echo $sperow->num_rows  ?>
                                                                 </div><br>
                                                                 <div class="h3-dashboard">
                                                                     Todos los Especialistas &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
