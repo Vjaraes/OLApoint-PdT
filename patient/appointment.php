@@ -146,7 +146,8 @@
 
                         date_default_timezone_set('America/Santiago');
 
-                        $today = date('Y-m-d');
+                        
+                        
                         echo $today;
 
                         

@@ -539,14 +539,14 @@
             $result= $database->query($sqlmain);
             $row=$result->fetch_assoc();
             $name=$row["spename"];
-            $email=$row["docemail"];
+            $email=$row["spemail"];
             $spe=$row["specialties"];
             
             $spcil_res= $database->query("select sname from specialties where id='$spe'");
             $spcil_array= $spcil_res->fetch_assoc();
             $spcil_name=$spcil_array["sname"];
-            $rut=$row['docrut'];
-            $tele=$row['doctel'];
+            $rut=$row['sperut'];
+            $tele=$row['spetel'];
             echo '
             <div id="popup1" class="overlay">
                     <div class="popup">

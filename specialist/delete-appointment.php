@@ -19,7 +19,7 @@
         //$result001= $database->query("select * from schedule where scheduleid=$id;");
         //$email=($result001->fetch_assoc())["spemail"];
         $sql= $database->query("delete from appointment where appoid='$id';");
-        //$sql= $database->query("delete from specialist where speemail='$email';");
+        //$sql= $database->query("delete from specialist where spemail='$email';");
         //print_r($email);
         header("location: appointment.php");
     }

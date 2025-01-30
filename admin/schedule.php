@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../css/main.css">  
     <link rel="stylesheet" href="../css/admin.css">
         
-    <title>Schedule</title>
+    <title>Agenda</title>
     <style>
         .popup{
             animation: transitionIn-Y-bottom 0.5s;
@@ -52,8 +52,8 @@
                                     <img src="../img/user.png" alt="" width="100%" style="border-radius:50%">
                                 </td>
                                 <td style="padding:0px;margin:0px;">
-                                    <p class="profile-title">Administrator</p>
-                                    <p class="profile-subtitle">admin@edoc.com</p>
+                                    <p class="profile-title">Administraor</p>
+                                    <p class="profile-subtitle">admin@OLApoint.com</p>
                                 </td>
                             </tr>
                             <tr>
@@ -161,7 +161,7 @@
 
                         </td>
                         <td width="5%" style="text-align: center;">
-                        specialist:
+                        Especialista:
                         </td>
                         <td width="30%">
                         <select name="speid" id="" class="box filter-container-items" style="width:90% ;height: 37px;margin: 0;" >

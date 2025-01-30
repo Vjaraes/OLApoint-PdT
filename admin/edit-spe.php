@@ -31,7 +31,7 @@
                 $id2=$id;
             }
             
-            echo $id2."jdfjdfdh";
+            echo $id2."speid";
             if($id2!=$id){
                 $error='1';
                 //$resultqq1= $database->query("select * from specialist where spemail='$email';");
