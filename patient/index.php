@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!speTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -89,8 +89,8 @@
                     </td>
                 </tr>
                 <tr class="menu-row">
-                    <td class="menu-btn menu-icon-doctor">
-                        <a href="doctors.php" class="non-style-link-menu"><div><p class="menu-text">All Doctors</p></a></div>
+                    <td class="menu-btn menu-icon-specialist">
+                        <a href="specialists.php" class="non-style-link-menu"><div><p class="menu-text">All specialists</p></a></div>
                     </td>
                 </tr>
                 
@@ -137,7 +137,7 @@
 
 
                                 $patientrow = $database->query("select  * from  patient;");
-                                $doctorrow = $database->query("select  * from  doctor;");
+                                $specialistrow = $database->query("select  * from  specialist;");
                                 $appointmentrow = $database->query("select  * from  appointment where appodate>='$today';");
                                 $schedulerow = $database->query("select  * from  schedule where scheduledate='$today';");
 
@@ -155,29 +155,29 @@
                     <td colspan="4" >
                         
                     <center>
-                    <table class="filter-container doctor-header patient-header" style="border: none;width:95%" border="0" >
+                    <table class="filter-container specialist-header patient-header" style="border: none;width:95%" border="0" >
                     <tr>
                         <td >
                             <h3>Welcome!</h3>
                             <h1><?php echo $username  ?>.</h1>
-                            <p>Haven't any idea about doctors? no problem let's jumping to 
-                                <a href="doctors.php" class="non-style-link"><b>"All Doctors"</b></a> section or 
-                                <a href="schedule.php" class="non-style-link"><b>"Sessions"</b> </a><br>
-                                Track your past and future appointments history.<br>Also find out the expected arrival time of your doctor or medical consultant.<br><br>
+                            <p>¿No tienes idea de qué necesitas?  Vamos a la sección de 
+                                <a href="specialists.php" class="non-style-link"><b>Todos los Especialistas.</b></a> o vamos a tus citas agendadas. 
+                                <a href="schedule.php" class="non-style-link"><b>"Sesiones"</b> </a><br>
+                                Sigue tus citas actuales y futuras<br>también confirma las citas de tu especialista.<br><br>
                             </p>
                             
-                            <h3>Channel a Doctor Here</h3>
+                            <h3>Channel a specialist Here</h3>
                             <form action="schedule.php" method="post" style="display: flex">
 
-                                <input type="search" name="search" class="input-text " placeholder="Search Doctor and We will Find The Session Available" list="doctors" style="width:45%;">&nbsp;&nbsp;
+                                <input type="search" name="search" class="input-text " placeholder="Search specialist and We will Find The Session Available" list="specialists" style="width:45%;">&nbsp;&nbsp;
                                 
                                 <?php
-                                    echo '<datalist id="doctors">';
-                                    $list11 = $database->query("select  docname,docemail from  doctor;");
+                                    echo '<datalist id="specialists">';
+                                    $list11 = $database->query("select  spename,spemail from  specialist;");
     
                                     for ($y=0;$y<$list11->num_rows;$y++){
                                         $row00=$list11->fetch_assoc();
-                                        $d=$row00["docname"];
+                                        $d=$row00["spename"];
                                         
                                         echo "<option value='$d'><br/>";
                                         
@@ -222,13 +222,13 @@
                                                     <div  class="dashboard-items"  style="padding:20px;margin:auto;width:95%;display: flex">
                                                         <div>
                                                                 <div class="h1-dashboard">
-                                                                    <?php    echo $doctorrow->num_rows  ?>
+                                                                    <?php    echo $specialistrow->num_rows  ?>
                                                                 </div><br>
                                                                 <div class="h3-dashboard">
-                                                                    All Doctors &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                    Todos los Especialistas &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                                 </div>
                                                         </div>
-                                                                <div class="btn-icon-back dashboard-icons" style="background-image: url('../img/icons/doctors-hover.svg');"></div>
+                                                                <div class="btn-icon-back dashboard-icons" style="background-image: url('../img/icons/specialists-hover.svg');"></div>
                                                     </div>
                                                 </td>
                                                 <td style="width: 25%;">
@@ -238,7 +238,7 @@
                                                                     <?php    echo $patientrow->num_rows  ?>
                                                                 </div><br>
                                                                 <div class="h3-dashboard">
-                                                                    All Patients &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                    Todos los Pacientes &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                                 </div>
                                                         </div>
                                                                 <div class="btn-icon-back dashboard-icons" style="background-image: url('../img/icons/patients-hover.svg');"></div>
@@ -253,7 +253,7 @@
                                                                     <?php    echo $appointmentrow ->num_rows  ?>
                                                                 </div><br>
                                                                 <div class="h3-dashboard" >
-                                                                    NewBooking &nbsp;&nbsp;
+                                                                    Nuevo Agendamiento &nbsp;&nbsp;
                                                                 </div>
                                                         </div>
                                                                 <div class="btn-icon-back dashboard-icons" style="margin-left: 0px;background-image: url('../img/icons/book-hover.svg');"></div>
@@ -268,7 +268,7 @@
                                                                     <?php    echo $schedulerow ->num_rows  ?>
                                                                 </div><br>
                                                                 <div class="h3-dashboard" style="font-size: 15px">
-                                                                    Today Sessions
+                                                                    Sesiones de Hoy
                                                                 </div>
                                                         </div>
                                                                 <div class="btn-icon-back dashboard-icons" style="background-image: url('../img/icons/session-iceblue.svg');"></div>
@@ -291,7 +291,7 @@
 
 
                             
-                                    <p style="font-size: 20px;font-weight:600;padding-left: 40px;" class="anime">Your Upcoming Booking</p>
+                                    <p style="font-size: 20px;font-weight:600;padding-left: 40px;" class="anime">Próximas Citas</p>
                                     <center>
                                         <div class="abc scroll" style="height: 250px;padding: 0;margin: 0;">
                                         <table width="85%" class="sub-table scrolldown" border="0" >
@@ -301,22 +301,22 @@
                                         <th class="table-headin">
                                                     
                                                 
-                                                    Appoint. Number
+                                                    Número de la Cita
                                                     
                                                     </th>
                                                 <th class="table-headin">
                                                     
                                                 
-                                                Session Title
+                                                Título de la sesión
                                                 
                                                 </th>
                                                 
                                                 <th class="table-headin">
-                                                    Doctor
+                                                    Especialista
                                                 </th>
                                                 <th class="table-headin">
                                                     
-                                                    Sheduled Date & Time
+                                                    Fecha y Hora agendada
                                                     
                                                 </th>
                                                     
@@ -325,8 +325,8 @@
                                         <tbody>
                                         
                                             <?php
-                                            $nextweek=date("Y-m-d",strtotime("+1 week"));
-                                                $sqlmain= "select * from schedule inner join appointment on schedule.scheduleid=appointment.scheduleid inner join patient on patient.pid=appointment.pid inner join doctor on schedule.docid=doctor.docid  where  patient.pid=$userid  and schedule.scheduledate>='$today' order by schedule.scheduledate asc";
+                                            $nextweek=date("d-m-Y",strtotime("+1 week"));
+                                                $sqlmain= "select * from schedule inner join appointment on schedule.scheduleid=appointment.scheduleid inner join patient on patient.pid=appointment.pid inner join specialist on schedule.speid=specialist.speid  where  patient.pid=$userid  and schedule.scheduledate>='$today' order by schedule.scheduledate asc";
                                                 //echo $sqlmain;
                                                 $result= $database->query($sqlmain);
                 
@@ -338,8 +338,8 @@
                                                     <img src="../img/notfound.svg" width="25%">
                                                     
                                                     <br>
-                                                    <p class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49)">Nothing to show here!</p>
-                                                    <a class="non-style-link" href="schedule.php"><button  class="login-btn btn-primary-soft btn"  style="display: flex;justify-content: center;align-items: center;margin-left:20px;">&nbsp; Channel a Doctor &nbsp;</font></button>
+                                                    <p class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49)">¡Nada que mostrar aquí!</p>
+                                                    <a class="non-style-link" href="schedule.php"><button  class="login-btn btn-primary-soft btn"  style="display: flex;justify-content: center;align-items: center;margin-left:20px;">&nbsp; Elija un Especialista &nbsp;</font></button>
                                                     </a>
                                                     </center>
                                                     <br><br><br><br>
@@ -353,7 +353,7 @@
                                                     $scheduleid=$row["scheduleid"];
                                                     $title=$row["title"];
                                                     $apponum=$row["apponum"];
-                                                    $docname=$row["docname"];
+                                                    $spename=$row["spename"];
                                                     $scheduledate=$row["scheduledate"];
                                                     $scheduletime=$row["scheduletime"];
                                                    
@@ -365,7 +365,7 @@
                                                         substr($title,0,30)
                                                         .'</td>
                                                         <td>
-                                                        '.substr($docname,0,20).'
+                                                        '.substr($spename,0,20).'
                                                         </td>
                                                         <td style="text-align:center;">
                                                             '.substr($scheduledate,0,10).' '.substr($scheduletime,0,5).'
