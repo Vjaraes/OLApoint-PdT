@@ -202,7 +202,7 @@
                                                     </div>
                                                 </td>
                                                 <td style="width: 25%;">
-                                                    <div  class="dashboard-items"  style="padding:20px;margin:auto;width:95%;display: flex;">
+                                                        <div  class="dashboard-items"  style="padding:20px;margin:auto;width:95%;display: flex;">
                                                         <div>
                                                                 <div class="h1-dashboard">
                                                                     <?php    echo $patientrow->num_rows  ?>
@@ -290,7 +290,7 @@
                                         
                                             <?php
                                             $nextweek=date("Y-m-d",strtotime("+1 week"));
-                                            $sqlmain= "select schedule.scheduleid,schedule.title,specialist.docname,schedule.scheduledate,schedule.scheduletime,schedule.nop from schedule inner join specialist on schedule.speid=specialist.speid  where schedule.scheduledate>='$today' and schedule.scheduledate<='$nextweek' order by schedule.scheduledate desc"; 
+                                            $sqlmain= "select schedule.scheduleid,schedule.title,specialist.spename,schedule.scheduledate,schedule.scheduletime,schedule.nop from schedule inner join specialist on schedule.speid=specialist.speid  where schedule.scheduledate>='$today' and schedule.scheduledate<='$nextweek' order by schedule.scheduledate desc"; 
                                                 $result= $database->query($sqlmain);
                 
                                                 if($result->num_rows==0){
