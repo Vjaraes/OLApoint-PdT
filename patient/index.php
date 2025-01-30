@@ -221,7 +221,7 @@
                                                                     <?php    echo $specialistrow->num_rows  ?>
                                                                 </div><br>
                                                                 <div class="h3-dashboard">
-                                                                    Todos los Especialistas &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                    Especialistas &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                                 </div>
                                                         </div>
                                                                 <div class="btn-icon-back dashboard-icons" style="background-image: url('../img/icons/specialists-hover.svg');"></div>
