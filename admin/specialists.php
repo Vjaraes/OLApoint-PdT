@@ -127,14 +127,14 @@
                     </td>
                     <td width="15%">
                         <p style="font-size: 14px;color: rgb(119, 119, 119);padding: 0;margin: 0;text-align: right;">
-                            Today's Date
+                            Today's $date = date('d-m-Y')
                         </p>
                         <p class="heading-sub12" style="padding: 0;margin: 0;">
                             <?php 
-                        date_default_timezone_set('America/Santiago');
+                        $date = date('d-m-Y')_default_timezone_set('America/Santiago');
 
-                        $date = date('Y-m-d');
-                        echo $date;
+                        $$date = date('d-m-Y') = $date = date('d-m-Y')('Y-m-d');
+                        echo $$date = date('d-m-Y');
                         ?>
                         </p>
                     </td>

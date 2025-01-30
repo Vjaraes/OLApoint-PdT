@@ -16,7 +16,7 @@
         .sub-table{
             animation: transitionIn-Y-bottom 0.5s;
         }
-</style>
+</style>u
 </head>
 <body>
     <?php

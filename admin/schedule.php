@@ -110,9 +110,9 @@
                         <p class="heading-sub12" style="padding: 0;margin: 0;">
                             <?php 
 
-                        date_default_timezone_set('America/Santiago');
+                        $date = date('d-m-Y')_default_timezone_set('America/Santiago');
 
-                        $today = date('d-m-Y');
+                        $today = $date = date('d-m-Y')('d-m-Y');
                         echo $today;
 
                         $list110 = $database->query("select  * from  schedule;");
@@ -152,12 +152,12 @@
 
                            </td> 
                         <td width="5%" style="text-align: center;">
-                        Date:
+                        $date = date('d-m-Y'):
                         </td>
                         <td width="30%">
                         <form action="" method="post">
                             
-                            <input type="date" name="sheduledate" id="date" class="input-text filter-container-items" style="margin: 0;width: 95%;">
+                            <input type="$date = date('d-m-Y')" name="shedule$date = date('d-m-Y')" id="$date = date('d-m-Y')" class="input-text filter-container-items" style="margin: 0;width: 95%;">
 
                         </td>
                         <td width="5%" style="text-align: center;">
@@ -200,9 +200,9 @@
                     if($_POST){
                         //print_r($_POST);
                         $sqlpt1="";
-                        if(!empty($_POST["sheduledate"])){
-                            $sheduledate=$_POST["sheduledate"];
-                            $sqlpt1=" schedule.scheduledate='$sheduledate' ";
+                        if(!empty($_POST["shedule$date = date('d-m-Y')"])){
+                            $shedule$date = date('d-m-Y')=$_POST["shedule$date = date('d-m-Y')"];
+                            $sqlpt1=" schedule.schedule$date = date('d-m-Y')='$shedule$date = date('d-m-Y')' ";
                         }
 
 
@@ -213,7 +213,7 @@
                         }
                         //echo $sqlpt2;
                         //echo $sqlpt1;
-                        $sqlmain= "select schedule.scheduleid,schedule.title,specialist.spename,schedule.scheduledate,schedule.scheduletime,schedule.nop from schedule inner join specialist on schedule.speid=specialist.speid ";
+                        $sqlmain= "select schedule.scheduleid,schedule.title,specialist.spename,schedule.schedule$date = date('d-m-Y'),schedule.scheduletime,schedule.nop from schedule inner join specialist on schedule.speid=specialist.speid ";
                         $sqllist=array($sqlpt1,$sqlpt2);
                         $sqlkeywords=array(" where "," and ");
                         $key2=0;
@@ -230,7 +230,7 @@
                         
                         //
                     }else{
-                        $sqlmain= "select schedule.scheduleid,schedule.title,specialist.spename,schedule.scheduledate,schedule.scheduletime,schedule.nop from schedule inner join specialist on schedule.speid=specialist.speid  order by schedule.scheduledate desc";
+                        $sqlmain= "select schedule.scheduleid,schedule.title,specialist.spename,schedule.schedule$date = date('d-m-Y'),schedule.scheduletime,schedule.nop from schedule inner join specialist on schedule.speid=specialist.speid  order by schedule.schedule$date = date('d-m-Y') desc";
 
                     }
 
@@ -302,7 +302,7 @@
                                     $scheduleid=$row["scheduleid"];
                                     $title=$row["title"];
                                     $spename=$row["spename"];
-                                    $scheduledate=$row["scheduledate"];
+                                    $schedule$date = date('d-m-Y')=$row["schedule$date = date('d-m-Y')"];
                                     $scheduletime=$row["scheduletime"];
                                     $nop=$row["nop"];
                                     echo '<tr>
@@ -313,7 +313,7 @@
                                         '.substr($spename,0,20).'
                                         </td>
                                         <td style="text-align:center;">
-                                            '.substr($scheduledate,0,10).' '.substr($scheduletime,0,5).'
+                                            '.substr($schedule$date = date('d-m-Y'),0,10).' '.substr($scheduletime,0,5).'
                                         </td>
                                         <td style="text-align:center;">
                                             '.$nop.'
@@ -426,12 +426,12 @@
                             </tr>
                             <tr>
                                 <td class="label-td" colspan="2">
-                                    <label for="date" class="form-label">Session Date: </label>
+                                    <label for="$date = date('d-m-Y')" class="form-label">Session $date = date('d-m-Y'): </label>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="label-td" colspan="2">
-                                    <input type="date" name="date" class="input-text" min="'.date('Y-m-d').'" required><br>
+                                    <input type="$date = date('d-m-Y')" name="$date = date('d-m-Y')" class="input-text" min="'.$date = date('d-m-Y')('Y-m-d').'" required><br>
                                 </td>
                             </tr>
                             <tr>
@@ -508,13 +508,13 @@
             </div>
             '; 
         }elseif($action=='view'){
-            $sqlmain= "select schedule.scheduleid,schedule.title,specialist.spename,schedule.scheduledate,schedule.scheduletime,schedule.nop from schedule inner join specialist on schedule.speid=specialist.speid  where  schedule.scheduleid=$id";
+            $sqlmain= "select schedule.scheduleid,schedule.title,specialist.spename,schedule.schedule$date = date('d-m-Y'),schedule.scheduletime,schedule.nop from schedule inner join specialist on schedule.speid=specialist.speid  where  schedule.scheduleid=$id";
             $result= $database->query($sqlmain);
             $row=$result->fetch_assoc();
             $spename=$row["spename"];
             $scheduleid=$row["scheduleid"];
             $title=$row["title"];
-            $scheduledate=$row["scheduledate"];
+            $schedule$date = date('d-m-Y')=$row["schedule$date = date('d-m-Y')"];
             $scheduletime=$row["scheduletime"];
             
            
@@ -566,12 +566,12 @@
                             </tr>
                             <tr>
                                 <td class="label-td" colspan="2">
-                                    <label for="nic" class="form-label">Scheduled Date: </label>
+                                    <label for="nic" class="form-label">Scheduled $date = date('d-m-Y'): </label>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="label-td" colspan="2">
-                                '.$scheduledate.'<br><br>
+                                '.$schedule$date = date('d-m-Y').'<br><br>
                                 </td>
                             </tr>
                             <tr>
