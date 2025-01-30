@@ -10,7 +10,7 @@
         
 
 
-    <title>Settings</title>
+    <title>Ajustes</title>
     <style>
         .dashbord-tables{
             animation: transitionIn-Y-over 0.5s;
@@ -82,28 +82,28 @@
                 </tr>
                 <tr class="menu-row" >
                     <td class="menu-btn menu-icon-home " >
-                        <a href="index.php" class="non-style-link-menu "><div><p class="menu-text">Home</p></a></div></a>
+                        <a href="index.php" class="non-style-link-menu "><div><p class="menu-text">Irutio</p></a></div></a>
                     </td>
                 </tr>
                 <tr class="menu-row">
-                    <td class="menu-btn menu-icon-doctor">
-                        <a href="doctors.php" class="non-style-link-menu"><div><p class="menu-text">All Doctors</p></a></div>
+                    <td class="menu-btn menu-icon-specialist">
+                        <a href="specialists.php" class="non-style-link-menu"><div><p class="menu-text">AlTodos los Especialistas</p></a></div>
                     </td>
                 </tr>
                 
                 <tr class="menu-row" >
                     <td class="menu-btn menu-icon-session">
-                        <a href="schedule.php" class="non-style-link-menu"><div><p class="menu-text">Scheduled Sessions</p></div></a>
+                        <a href="schedule.php" class="non-style-link-menu"><div><p class="menu-text">Sesiones Agendadas</p></div></a>
                     </td>
                 </tr>
                 <tr class="menu-row" >
                     <td class="menu-btn menu-icon-appoinment">
-                        <a href="appointment.php" class="non-style-link-menu"><div><p class="menu-text">My Bookings</p></a></div>
+                        <a href="appointment.php" class="non-style-link-menu"><div><p class="menu-text">Mis Agendamientos</p></a></div>
                     </td>
                 </tr>
                 <tr class="menu-row" >
                     <td class="menu-btn menu-icon-settings  menu-active menu-icon-settings-active">
-                        <a href="settings.php" class="non-style-link-menu  non-style-link-menu-active"><div><p class="menu-text">Settings</p></a></div>
+                        <a href="settings.php" class="non-style-link-menu  non-style-link-menu-active"><div><p class="menu-text">Ajustes</p></a></div>
                     </td>
                 </tr>
                 
@@ -118,7 +118,7 @@
                     <a href="settings.php" ><button  class="login-btn btn-primary-soft btn btn-icon-back"  style="padding-top:11px;padding-bottom:11px;margin-left:20px;width:125px"><font class="tn-in-text">Back</font></button></a>
                     </td>
                     <td>
-                        <p style="font-size: 23px;padding-left:12px;font-weight: 600;">Settings</p>
+                        <p style="font-size: 23px;padding-left:12px;font-weight: 600;">Ajustes</p>
                                            
                     </td>
                     
@@ -135,7 +135,7 @@
 
 
                                 $patientrow = $database->query("select  * from  patient;");
-                                $doctorrow = $database->query("select  * from  doctor;");
+                                $specialistrow = $database->query("select  * from  specialist;");
                                 $appointmentrow = $database->query("select  * from  appointment where appodate>='$today';");
                                 $schedulerow = $database->query("select  * from  schedule where scheduledate='$today';");
 
@@ -163,14 +163,14 @@
                                 <td style="width: 25%;">
                                     <a href="?action=edit&id=<?php echo $userid ?>&error=0" class="non-style-link">
                                     <div  class="dashboard-items setting-tabs"  style="padding:20px;margin:auto;width:95%;display: flex">
-                                        <div class="btn-icon-back dashboard-icons-setting" style="background-image: url('../img/icons/doctors-hover.svg');"></div>
+                                        <div class="btn-icon-back dashboard-icons-setting" style="background-image: url('../img/icons/specialists-hover.svg');"></div>
                                         <div>
                                                 <div class="h1-dashboard">
-                                                    Account Settings  &nbsp;
+                                                    Ajustes de Cuenta  &nbsp;
 
                                                 </div><br>
                                                 <div class="h3-dashboard" style="font-size: 15px;">
-                                                    Edit your Account Details & Change Password
+                                                    Edita los detalles de tu cuenta y cambia tu contraseña
                                                 </div>
                                         </div>
                                                 
@@ -192,11 +192,11 @@
                                         <div class="btn-icon-back dashboard-icons-setting " style="background-image: url('../img/icons/view-iceblue.svg');"></div>
                                         <div>
                                                 <div class="h1-dashboard" >
-                                                    View Account Details
+                                                    Ver detalles de tu cuenta
                                                     
                                                 </div><br>
                                                 <div class="h3-dashboard"  style="font-size: 15px;">
-                                                    View Personal information About Your Account
+                                                    Ver información personal de tu cuenta
                                                 </div>
                                         </div>
                                                 
@@ -217,11 +217,11 @@
                                         <div class="btn-icon-back dashboard-icons-setting" style="background-image: url('../img/icons/patients-hover.svg');"></div>
                                         <div>
                                                 <div class="h1-dashboard" style="color: #ff5050;">
-                                                    Delete Account
+                                                    Borrar cuenta
                                                     
                                                 </div><br>
                                                 <div class="h3-dashboard"  style="font-size: 15px;">
-                                                    Will Permanently Remove your Account
+                                                    Esto borrará tu cuenta de manera permanente.
                                                 </div>
                                         </div>
                                                 
@@ -252,11 +252,11 @@
                         <h2>Are you sure?</h2>
                         <a class="close" href="settings.php">&times;</a>
                         <div class="content">
-                            You want to delete Your Account<br>('.substr($nameget,0,40).').
+                            ¿Deseas eliminar esta cuenta de manera permanente?<br>('.substr($nameget,0,40).').
                             
                         </div>
                         <div style="display: flex;justify-content: center;">
-                        <a href="delete-account.php?id='.$id.'" class="non-style-link"><button  class="btn-primary btn"  style="display: flex;justify-content: center;align-items: center;margin:10px;padding:10px;"<font class="tn-in-text">&nbsp;Yes&nbsp;</font></button></a>&nbsp;&nbsp;&nbsp;
+                        <a href="delete-account.php?id='.$id.'" class="non-style-link"><button  class="btn-primary btn"  style="display: flex;justify-content: center;align-items: center;margin:10px;padding:10px;"<font class="tn-in-text">&nbsp;SI&nbsp;</font></button></a>&nbsp;&nbsp;&nbsp;
                         <a href="settings.php" class="non-style-link"><button  class="btn-primary btn"  style="display: flex;justify-content: center;align-items: center;margin:10px;padding:10px;"><font class="tn-in-text">&nbsp;&nbsp;No&nbsp;&nbsp;</font></button></a>
 
                         </div>
@@ -277,7 +277,7 @@
             
            
             $dob=$row["pdob"];
-            $nic=$row['pnic'];
+            $rut=$row['prut'];
             $tele=$row['ptel'];
             echo '
             <div id="popup1" class="overlay">
@@ -286,11 +286,11 @@
                         <h2></h2>
                         <a class="close" href="settings.php">&times;</a>
                         <div class="content">
-                            eDoc Web App<br>
+                            OLAPoint | Online appointment<br>
                             
                         </div>
                         <div style="display: flex;justify-content: center;">
-                        <table width="80%" class="sub-table scrolldown add-doc-form-container" border="0">
+                        <table width="80%" class="sub-table scrolldown add-spe-form-container" border="0">
                         
                             <tr>
                                 <td>
@@ -322,12 +322,12 @@
                             </tr>
                             <tr>
                                 <td class="label-td" colspan="2">
-                                    <label for="nic" class="form-label">NIC: </label>
+                                    <label for="rut" class="form-label">rut: </label>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="label-td" colspan="2">
-                                '.$nic.'<br><br>
+                                '.$rut.'<br><br>
                                 </td>
                             </tr>
                             <tr>
@@ -392,7 +392,7 @@
             
             
             $address=$row["paddress"];
-            $nic=$row['pnic'];
+            $rut=$row['prut'];
             $tele=$row['ptel'];
 
             $error_1=$_GET["error"];
@@ -414,7 +414,7 @@
                                 <a class="close" href="settings.php">&times;</a> 
                                 <div style="display: flex;justify-content: center;">
                                 <div class="abc">
-                                <table width="80%" class="sub-table scrolldown add-doc-form-container" border="0">
+                                <table width="80%" class="sub-table scrolldown add-spe-form-container" border="0">
                                 <tr>
                                         <td class="label-td" colspan="2">'.
                                             $errorlist[$error_1]
@@ -447,19 +447,19 @@
                                     </tr>
                                     <tr>
                                         <td class="label-td" colspan="2">
-                                            <input type="text" name="name" class="input-text" placeholder="Doctor Name" value="'.$name.'" required><br>
+                                            <input type="text" name="name" class="input-text" placeholder="specialist Name" value="'.$name.'" required><br>
                                         </td>
                                         
                                     </tr>
                                     
                                     <tr>
                                         <td class="label-td" colspan="2">
-                                            <label for="nic" class="form-label">NIC: </label>
+                                            <label for="rut" class="form-label">rut: </label>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td class="label-td" colspan="2">
-                                            <input type="text" name="nic" class="input-text" placeholder="NIC Number" value="'.$nic.'" required><br>
+                                            <input type="text" name="rut" class="input-text" placeholder="rut Number" value="'.$rut.'" required><br>
                                         </td>
                                     </tr>
                                     <tr>

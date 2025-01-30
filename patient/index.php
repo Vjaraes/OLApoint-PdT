@@ -126,7 +126,7 @@
                             </td>
                             <td width="15%">
                                 <p style="font-size: 14px;color: rgb(119, 119, 119);padding: 0;margin: 0;text-align: right;">
-                                    Today's Date
+                                    Fecha de hoy
                                 </p>
                                 <p class="heading-sub12" style="padding: 0;margin: 0;">
                                     <?php 
@@ -160,16 +160,16 @@
                         <td >
                             <h3>Bienvenido!</h3>
                             <h1><?php echo $username  ?>.</h1>
-                            <p>¿No tienes idea de qué necesitas?  Vamos a la sección de 
-                                <a href="specialists.php" class="non-style-link"><b>Todos los Especialistas.</b></a> o vamos a tus citas agendadas. 
+                            <p>¿No sabes qué necesitas?  Vamos a la sección de 
+                                <a href="specialists.php" class="non-style-link"><b>todos los Especialistas</b></a> o vamos a tus citas agendadas. 
                                 <a href="schedule.php" class="non-style-link"><b>"Sesiones"</b> </a><br>
-                                Sigue tus citas actuales y futuras<br>también confirma las citas de tu especialista.<br><br>
+                                Sigue tus citas actuales y futuras, también puedes confirmar las citas de tu especialista.<br><br>
                             </p>
                             
                             <h3>Elije un especialista aquí</h3>
                             <form action="schedule.php" method="post" style="display: flex">
 
-                                <input type="search" name="search" class="input-text " placeholder="Search specialist and We will Find The Session Available" list="specialists" style="width:45%;">&nbsp;&nbsp;
+                                <input type="search" name="search" class="input-text " placeholder="Busca un especialista aquí" list="specialists" style="width:45%;">&nbsp;&nbsp;
                                 
                                 <?php
                                     echo '<datalist id="specialists">';
@@ -210,7 +210,7 @@
                                         <table class="filter-container" style="border: none;" border="0">
                                             <tr>
                                                 <td colspan="4">
-                                                    <p style="font-size: 20px;font-weight:600;padding-left: 12px;">Status</p>
+                                                    <p style="font-size: 20px;font-weight:600;padding-left: 12px;">Estado</p>
                                                 </td>
                                             </tr>
                                             <tr>

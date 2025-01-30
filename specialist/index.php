@@ -292,7 +292,7 @@
                                             <?php
                                             $nextweek=date("d-m-Y",strtotime("+1 week"));
                                             $sqlmain= "select schedule.scheduleid,schedule.title,specialist.spename,schedule.scheduledate,schedule.scheduletime,schedule.nop from schedule inner join specialist on schedule.speid=specialist.speid  where schedule.scheduledate>='$today' and schedule.scheduledate<='$nextweek' order by schedule.scheduledate desc"; 
-                                                $result= $database->query($s);
+                                                $result= $database->query($sqlmain);
                 
                                                 if($result->num_rows==0){
                                                     echo '<tr>
