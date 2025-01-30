@@ -46,7 +46,7 @@
 
     //import database
     include("../connection.php");
-    $userrow = $database->query("select * from specialist where speemail='$useremail'");
+    $userrow = $database->query("select * from specialist where spemail='$useremail'");
     $userfetch=$userrow->fetch_assoc();
     $userid= $userfetch["speid"];
     $username=$userfetch["spename"];
